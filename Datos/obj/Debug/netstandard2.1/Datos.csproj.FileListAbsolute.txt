@@ -1,0 +1,12 @@
+c:\Users\juan_\OneDrive\Escritorio\U2020-2\Programacion bajo web\Parcial2\Datos\bin\Debug\netstandard2.1\Datos.deps.json
+c:\Users\juan_\OneDrive\Escritorio\U2020-2\Programacion bajo web\Parcial2\Datos\bin\Debug\netstandard2.1\Datos.dll
+c:\Users\juan_\OneDrive\Escritorio\U2020-2\Programacion bajo web\Parcial2\Datos\bin\Debug\netstandard2.1\Datos.pdb
+c:\Users\juan_\OneDrive\Escritorio\U2020-2\Programacion bajo web\Parcial2\Datos\bin\Debug\netstandard2.1\Entity.dll
+c:\Users\juan_\OneDrive\Escritorio\U2020-2\Programacion bajo web\Parcial2\Datos\bin\Debug\netstandard2.1\Entity.pdb
+c:\Users\juan_\OneDrive\Escritorio\U2020-2\Programacion bajo web\Parcial2\Datos\obj\Debug\netstandard2.1\Datos.csprojAssemblyReference.cache
+c:\Users\juan_\OneDrive\Escritorio\U2020-2\Programacion bajo web\Parcial2\Datos\obj\Debug\netstandard2.1\Datos.AssemblyInfoInputs.cache
+c:\Users\juan_\OneDrive\Escritorio\U2020-2\Programacion bajo web\Parcial2\Datos\obj\Debug\netstandard2.1\Datos.AssemblyInfo.cs
+c:\Users\juan_\OneDrive\Escritorio\U2020-2\Programacion bajo web\Parcial2\Datos\obj\Debug\netstandard2.1\Datos.csproj.CoreCompileInputs.cache
+c:\Users\juan_\OneDrive\Escritorio\U2020-2\Programacion bajo web\Parcial2\Datos\obj\Debug\netstandard2.1\Datos.csproj.CopyComplete
+c:\Users\juan_\OneDrive\Escritorio\U2020-2\Programacion bajo web\Parcial2\Datos\obj\Debug\netstandard2.1\Datos.dll
+c:\Users\juan_\OneDrive\Escritorio\U2020-2\Programacion bajo web\Parcial2\Datos\obj\Debug\netstandard2.1\Datos.pdb

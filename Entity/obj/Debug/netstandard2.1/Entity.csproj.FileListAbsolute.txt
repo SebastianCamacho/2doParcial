@@ -1,0 +1,9 @@
+c:\Users\juan_\OneDrive\Escritorio\U2020-2\Programacion bajo web\Parcial2\Entity\bin\Debug\netstandard2.1\Entity.deps.json
+c:\Users\juan_\OneDrive\Escritorio\U2020-2\Programacion bajo web\Parcial2\Entity\bin\Debug\netstandard2.1\Entity.dll
+c:\Users\juan_\OneDrive\Escritorio\U2020-2\Programacion bajo web\Parcial2\Entity\bin\Debug\netstandard2.1\Entity.pdb
+c:\Users\juan_\OneDrive\Escritorio\U2020-2\Programacion bajo web\Parcial2\Entity\obj\Debug\netstandard2.1\Entity.csprojAssemblyReference.cache
+c:\Users\juan_\OneDrive\Escritorio\U2020-2\Programacion bajo web\Parcial2\Entity\obj\Debug\netstandard2.1\Entity.AssemblyInfoInputs.cache
+c:\Users\juan_\OneDrive\Escritorio\U2020-2\Programacion bajo web\Parcial2\Entity\obj\Debug\netstandard2.1\Entity.AssemblyInfo.cs
+c:\Users\juan_\OneDrive\Escritorio\U2020-2\Programacion bajo web\Parcial2\Entity\obj\Debug\netstandard2.1\Entity.csproj.CoreCompileInputs.cache
+c:\Users\juan_\OneDrive\Escritorio\U2020-2\Programacion bajo web\Parcial2\Entity\obj\Debug\netstandard2.1\Entity.dll
+c:\Users\juan_\OneDrive\Escritorio\U2020-2\Programacion bajo web\Parcial2\Entity\obj\Debug\netstandard2.1\Entity.pdb
