@@ -15,5 +15,10 @@ namespace Entity
         public string Departamento { get; set; }
         public string Ciudad { get; set; }
         public List<Pago> Pagos { get; set; }
+
+        public static explicit operator Persona(List<Persona> v)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
