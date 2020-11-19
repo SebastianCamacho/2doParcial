@@ -9,5 +9,4 @@ export class Persona {
     public Pais:string;
     public Departamento:string;
     public Ciudad:string;
-    public Pagos:null;
 }

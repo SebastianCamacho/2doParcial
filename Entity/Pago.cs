@@ -12,5 +12,6 @@ namespace Entity
         public DateTime Fecha { get; set; }
         public Decimal ValorDePago { get; set; }
         public Decimal ValorIva { get; set; }
+        public Persona  persona{get;set;}
     }
 }

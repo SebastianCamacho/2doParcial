@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { PagoService } from 'src/app/services/pago.service';
+import { Pago } from '../models/pago';
 
 @Component({
   selector: 'app-pago-consulta',
@@ -7,9 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PagoConsultaComponent implements OnInit {
 
-  constructor() { }
+  searchText:string;
+  pagos: Pago[];
 
-  ngOnInit(): void {
+  constructor(private personaService: PagoService) { }
+
+  ngOnInit() {
+    
   }
 
 }

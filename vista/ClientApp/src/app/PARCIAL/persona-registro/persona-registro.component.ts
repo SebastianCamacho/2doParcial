@@ -9,13 +9,11 @@ import { Persona } from '../models/persona';
 })
 export class PersonaRegistroComponent implements OnInit {
   persona: Persona;
-  constructor(private personaService: PersonaService,) { }
+  constructor(private personaService: PersonaService) { }
 
 
   ngOnInit(): void {
     this.persona = new Persona();
-    this.persona.NumeroDeDocumento="#4567";
-    
   }
 
   add() {
@@ -27,4 +25,6 @@ export class PersonaRegistroComponent implements OnInit {
     });
 
   }
+
+  
 }

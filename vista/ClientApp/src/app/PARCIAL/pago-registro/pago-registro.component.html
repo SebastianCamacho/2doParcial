@@ -1,1 +1,83 @@
-<p>pago-registro works!</p>
+<div class="container">
+    <br>
+
+
+    <div class="row">
+        <!-- CONSULTAR TERCERO -->
+
+        <div class="col-5">
+            <h2>Consulta de Tercero <i class="fas fa-clipboard-list"></i></h2>
+            <hr>
+            <form action="">
+                <div class="col-12">
+                    <div class="form-group">
+                        <label for="Consultar">Consultar Persona o Empresa </label>
+                        <input type="text" class="form-control" name="Consultar" placeholder="Numero de Documento"
+                            [(ngModel)]="search">
+                    </div>
+                </div>
+                <div class="col-12 justify-content-center">
+                    <button class="btn btn-dark btn-block mt-4" (click)="get()">Consultar</button>
+                </div>
+            </form>
+            <div class="col-12">
+                <form>
+                    <label for="Consultar">Tipo De Documento: </label>
+                    <input type="text" class="form-control form-control-sm " name="Consultar"
+                        placeholder="Numero de Documento" [(ngModel)]="persona.NumeroDeDocumento" disabled>
+                    <label for="Nombre">Nombre: </label>
+                    <input type="text" class="form-control form-control-sm " name="Nombre" placeholder="Nombre"
+                        [(ngModel)]="persona.Nombre" disabled>
+                    <label for="Direccion">Direccion: </label>
+                    <input type="text" class="form-control form-control-sm " name="Direccion" placeholder="Direccion"
+                        [(ngModel)]="persona.Direccion" disabled>
+                    <label for="Telefono">Telefono: </label>
+                    <input type="text" class="form-control form-control-sm " name="Telefono" placeholder="Telefono"
+                        [(ngModel)]="persona.Telefono" disabled>
+                    <label for="Pais">Pais: </label>
+                    <input type="text" class="form-control form-control-sm " name="Pais" placeholder="Pais"
+                        [(ngModel)]="persona.Pais" disabled>
+                    <label for="Departamento">Departamento: </label>
+                    <input type="text" class="form-control form-control-sm " name="Departamento"
+                        placeholder="Departamento" [(ngModel)]="persona.Departamento" disabled>
+                    <label for="Ciudad">Ciudad: </label>
+                    <input type="text" class="form-control form-control-sm " name="Ciudad" placeholder="Ciudad"
+                        [(ngModel)]="persona.Ciudad" disabled>
+                </form>
+            </div>
+        </div>
+        <!-- REGISTRAR PAGO -->
+        <div class="col-7">
+            <h2>Registro de pagos <i class="fas fa-clipboard-list"></i></h2>
+            <hr>
+            <label for="IdDePAgo">Id de Pago: </label>
+            <input type="text" class="form-control " name="IdDePAgo de Pago" placeholder="Id de pago"
+                [(ngModel)]="pago.IdDePago">
+            <label for="TipoDePago">Tipo De Pago </label>
+            <select type="text" class="form-control" name="TipoDePago" placeholder="Seleccione Tipo De Pago..."
+                [(ngModel)]="pago.TipoDePago">
+                <option value="NIT">Administrativos</option>
+                <option value="CC">Financieros</option>
+                <option value="CC">Legales</option>
+                <option value="CC">Viajes Y transportes</option>
+                <option value="CC">Honorarios</option>
+                <option value="CC">Arrendamiento</option>
+                <option value="CC">Impuestos</option>
+                <option value="CC">Retenciones</option>
+            </select>
+            <label for="Fecha">Fecha: </label>
+            <input type="date" class="form-control " name="Fecha" placeholder="Fecha" [(ngModel)]="pago.Fecha">
+            <label for="ValorDePago">Valor de pago: </label>
+            <input type="text" class="form-control " name="ValorDePago" placeholder="Valor de pago"
+                [(ngModel)]="pago.ValorDePago">
+            <label for="ValorIva">Valor de iva: </label>
+            <input type="text" class="form-control " name="ValorIva" placeholder="Valor de iva"
+                [(ngModel)]="pago.ValorIva">
+
+            <div class="col-12 justify-content-center">
+                <button class="btn btn-dark btn-block mt-4" (click)="add()">Consultar</button>
+            </div>
+
+        </div>
+    </div>
+</div>

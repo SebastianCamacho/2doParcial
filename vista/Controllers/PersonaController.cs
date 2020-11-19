@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using Datos;
 using Entity;
 using Logica;
@@ -18,6 +19,12 @@ namespace vista.Controllers
             _personaService = new PersonaService(_context);
         }
         
+        [HttpGet]
+        public IEnumerable<PersonaViewModel> Get()
+        {
+            var personas = _personaService.ConsultarTodos().Personas.Select(p => new PersonaViewModel(p));
+            return personas;
+        }
 
         // GET: api/Persona/5
         [HttpGet("{numeroDeDocumento}")]
@@ -44,7 +51,7 @@ namespace vista.Controllers
         {
             var persona = new Persona
             {
-                NumeroDeCocumento = personaInput.NumeroDeCocumento,
+                NumeroDeDocumento = personaInput.NumeroDeDocumento,
             TipoDeDocumento = personaInput.TipoDeDocumento,
             Nombre = personaInput.Nombre,
             Direccion = personaInput.Direccion,
@@ -52,8 +59,6 @@ namespace vista.Controllers
             Pais = personaInput.Pais,
             Departamento = personaInput.departamento,
             Ciudad = personaInput.Ciudad,
-            Pagos=personaInput.Pagos
-            
         };
             return persona;
         }

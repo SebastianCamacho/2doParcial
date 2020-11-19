@@ -7,7 +7,7 @@ namespace vista
 {
     public class PersonaInputModel
     {
-        public string NumeroDeCocumento { get; set; }
+        public string NumeroDeDocumento { get; set; }
         public string TipoDeDocumento { get; set; }
         public string Nombre { get; set; }
         public string Direccion { get; set; }
@@ -15,7 +15,6 @@ namespace vista
         public string Pais { get; set; }
         public string departamento { get; set; }
         public string Ciudad { get; set; }
-        public List<Pago> Pagos { get; set; }
         
         
     }
@@ -24,7 +23,7 @@ namespace vista
         public PersonaViewModel(){ }
         public PersonaViewModel(Persona persona)
         {
-            NumeroDeCocumento = persona.NumeroDeCocumento;
+            NumeroDeDocumento = persona.NumeroDeDocumento;
             TipoDeDocumento = persona.TipoDeDocumento;
             Nombre = persona.Nombre;
             Direccion = persona.Direccion;
@@ -32,8 +31,6 @@ namespace vista
             Pais = persona.Pais;
             departamento = persona.Departamento;
             Ciudad = persona.Ciudad;
-            Pagos=persona.Pagos;
-            
         }
             
     }

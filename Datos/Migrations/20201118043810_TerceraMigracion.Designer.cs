@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Datos.Migrations
 {
     [DbContext(typeof(RegistrosContext))]
-    [Migration("20201113013045_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20201118043810_TerceraMigracion")]
+    partial class TerceraMigracion
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -38,22 +38,25 @@ namespace Datos.Migrations
                     b.Property<decimal>("ValorIva")
                         .HasColumnType("decimal(18,2)");
 
-                    b.Property<string>("personaNumeroDeCocumento")
+                    b.Property<string>("personaNumeroDeDocumento")
                         .HasColumnType("nvarchar(450)");
 
                     b.HasKey("IdDePago");
 
-                    b.HasIndex("personaNumeroDeCocumento");
+                    b.HasIndex("personaNumeroDeDocumento");
 
                     b.ToTable("Pagos");
                 });
 
             modelBuilder.Entity("Entity.Persona", b =>
                 {
-                    b.Property<string>("NumeroDeCocumento")
+                    b.Property<string>("NumeroDeDocumento")
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("Ciudad")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Departamento")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Direccion")
@@ -71,10 +74,7 @@ namespace Datos.Migrations
                     b.Property<string>("TipoDeDocumento")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("departamento")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("NumeroDeCocumento");
+                    b.HasKey("NumeroDeDocumento");
 
                     b.ToTable("Personas");
                 });
@@ -82,8 +82,8 @@ namespace Datos.Migrations
             modelBuilder.Entity("Entity.Pago", b =>
                 {
                     b.HasOne("Entity.Persona", "persona")
-                        .WithMany("Pago")
-                        .HasForeignKey("personaNumeroDeCocumento");
+                        .WithMany()
+                        .HasForeignKey("personaNumeroDeDocumento");
                 });
 #pragma warning restore 612, 618
         }

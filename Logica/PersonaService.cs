@@ -2,6 +2,7 @@ using Entity;
 using Datos;
 using System;
 using System.Linq;
+using System.Collections.Generic;
 
 namespace Logica
 {
@@ -17,7 +18,7 @@ namespace Logica
         {
             try
             {   
-                var personaBuscada = _context.Personas.Find(persona.NumeroDeCocumento);
+                var personaBuscada = _context.Personas.Find(persona.NumeroDeDocumento);
                 if (personaBuscada != null)
                 {
                     return new GuardarPersonaResponse("Error, el persona ya se encuentra registrada.");
@@ -44,8 +45,25 @@ namespace Logica
             return _context.Personas.Count();
         }
         
+        public ConsultarPersonaResponse ConsultarTodos()
+        {
+            try
+            {
+                if(_context.Pagos.ToList().Count()<1){
+                    return new ConsultarPersonaResponse("No hay personas registradas");
 
+                }else{
+                    return new ConsultarPersonaResponse(_context.Personas.ToList());
+                }
+            }
+            catch (Exception e)
+            {
+                return new ConsultarPersonaResponse($"Error de la Aplicacion: {e.Message}");
+            }
+           
 
+        }
+        
 
 
 
@@ -71,5 +89,22 @@ namespace Logica
         public bool Error { get; set; }
         public string Mensaje { get; set; }
         public Persona Persona { get; set; }
+    }
+    public class ConsultarPersonaResponse
+    {
+        public ConsultarPersonaResponse(List<Persona> personas)
+        {
+            Error = false;
+            Personas = personas;
+        }
+        public ConsultarPersonaResponse(string mensaje)
+        {
+            Error = true;
+            Mensaje = mensaje;
+        }
+        public bool Error { get; set; }
+        public string Mensaje { get; set; }
+        public List<Persona> Personas { get; set; }
+
     }
 }

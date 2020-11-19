@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Datos;
 using Entity;
+using Microsoft.EntityFrameworkCore;
 
 namespace Logica
 {
@@ -11,18 +12,19 @@ namespace Logica
         private readonly RegistrosContext _context;
         public PagoService(RegistrosContext context)
         {
-            _context=context;
+            _context = context;
         }
         public GuardarPagoResponse Guardar(Pago pago)
         {
             try
-            {   
+            {
                 var PagoBuscado = _context.Pagos.Find(pago.IdDePago);
                 if (PagoBuscado != null)
                 {
                     return new GuardarPagoResponse("Error, el Pago ya se encuentra registrado.");
                 }
 
+                _context.Pagos.Attach(pago);
                 _context.Pagos.Add(pago);
                 _context.SaveChanges();
 
@@ -34,7 +36,7 @@ namespace Logica
             }
         }
 
-        
+
 
         public Pago BuscarPorNumeroDeDocumento(string IdDePago)
         {
@@ -48,12 +50,12 @@ namespace Logica
         }
         public List<Pago> ConsultarTodos()
         {
-            List<Pago> pagos = _context.Pagos.ToList();
-            return pagos;    
+            List<Pago> pagos = _context.Pagos.Include("persona").ToList();
+            return pagos;
         }
-        
+
     }
-    public class GuardarPagoResponse 
+    public class GuardarPagoResponse
     {
         public GuardarPagoResponse(Pago pago)
         {
@@ -70,3 +72,5 @@ namespace Logica
         public Pago Pago { get; set; }
     }
 }
+
+

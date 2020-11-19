@@ -4,14 +4,16 @@ using Datos;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Datos.Migrations
 {
     [DbContext(typeof(RegistrosContext))]
-    partial class RegistrosContextModelSnapshot : ModelSnapshot
+    [Migration("20201118033726_primeraMigracion")]
+    partial class primeraMigracion
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -27,6 +29,9 @@ namespace Datos.Migrations
                     b.Property<DateTime>("Fecha")
                         .HasColumnType("datetime2");
 
+                    b.Property<string>("PersonaNumeroDeDocumento")
+                        .HasColumnType("nvarchar(450)");
+
                     b.Property<string>("TipoDePago")
                         .HasColumnType("nvarchar(max)");
 
@@ -36,12 +41,9 @@ namespace Datos.Migrations
                     b.Property<decimal>("ValorIva")
                         .HasColumnType("decimal(18,2)");
 
-                    b.Property<string>("personaNumeroDeDocumento")
-                        .HasColumnType("nvarchar(450)");
-
                     b.HasKey("IdDePago");
 
-                    b.HasIndex("personaNumeroDeDocumento");
+                    b.HasIndex("PersonaNumeroDeDocumento");
 
                     b.ToTable("Pagos");
                 });
@@ -79,9 +81,9 @@ namespace Datos.Migrations
 
             modelBuilder.Entity("Entity.Pago", b =>
                 {
-                    b.HasOne("Entity.Persona", "persona")
-                        .WithMany()
-                        .HasForeignKey("personaNumeroDeDocumento");
+                    b.HasOne("Entity.Persona", null)
+                        .WithMany("Pagos")
+                        .HasForeignKey("PersonaNumeroDeDocumento");
                 });
 #pragma warning restore 612, 618
         }

@@ -10,6 +10,7 @@ namespace vista
         public DateTime Fecha { get; set; }
         public Decimal ValorDePago { get; set; }
         public Decimal ValorIva { get; set; }
+        public Persona persona { get; set; }
         
     }
     public class PagoViewModel : PagoInputModel
@@ -22,8 +23,8 @@ namespace vista
             Fecha = pago.Fecha;
             ValorDePago = pago.ValorDePago;
             ValorIva = pago.ValorIva;
-            
-            
+            persona=pago.persona; 
         }
+        
     }
 }
