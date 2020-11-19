@@ -1,10 +1,10 @@
 import { Persona } from "./persona";
 
 export class Pago {
-    public IdDePago:string;
-    public TipoDePago:string;
-    public Fecha:string;
-    public ValorDePago:string;
-    public ValorIva:string;
-    public Persona:Persona;
+    public idDePago:string;
+    public tipoDePago:string;
+    public fecha:string;
+    public valorDePago:string;
+    public valorIva:string;
+    public persona:Persona;
 }

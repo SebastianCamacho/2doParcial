@@ -12,10 +12,12 @@ export class PagoConsultaComponent implements OnInit {
   searchText:string;
   pagos: Pago[];
 
-  constructor(private personaService: PagoService) { }
+  constructor(private pagoService: PagoService) { }
 
   ngOnInit() {
-    
+    this.pagoService.get().subscribe(result => {
+      this.pagos = result;
+    });
   }
 
 }

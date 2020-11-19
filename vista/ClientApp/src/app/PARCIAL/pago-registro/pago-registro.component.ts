@@ -20,7 +20,6 @@ export class PagoRegistroComponent implements OnInit {
   search: string;
   ngOnInit(): void {
     this.persona = new Persona();
-    this.persona.NumeroDeDocumento="1033";
     this.pago = new Pago();
     this.personaService.get().subscribe(result => {
       this.personas = result;
@@ -30,7 +29,7 @@ export class PagoRegistroComponent implements OnInit {
   public buscarTercero() {
 
     this.personas.forEach(element => {
-      if (element.NumeroDeDocumento === this.search) {
+      if (element.numeroDeDocumento === this.search) {
         this.persona = element; 
         alert(JSON.stringify(this.persona));
       }
@@ -48,7 +47,7 @@ export class PagoRegistroComponent implements OnInit {
   }
 
   add() {
-    this.pago.Persona=this.persona;
+    this.pago.persona=this.persona;
     this.pagoService.post(this.pago).subscribe(p => {
       if (p != null) {
         alert('Pago Registrado!');

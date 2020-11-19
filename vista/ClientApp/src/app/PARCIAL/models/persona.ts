@@ -1,12 +1,12 @@
 import { Pago } from "./pago";
 
 export class Persona {
-    public NumeroDeDocumento:string;
-    public TipoDeDocumento:string;
-    public Nombre:string;
-    public Direccion:string;
-    public Telefono:string;
-    public Pais:string;
-    public Departamento:string;
-    public Ciudad:string;
+    public numeroDeDocumento:string;
+    public tipoDeDocumento:string;
+    public nombre:string;
+    public direccion:string;
+    public telefono:string;
+    public pais:string;
+    public departamento:string;
+    public ciudad:string;
 }
